@@ -18,6 +18,11 @@ visualizer = FeatureCorrelation(labels=features)
 plt.rcParams['figure.figsize']=(10,10)
 visualizer.fit(X, y)
 visualizer.show()
+
+sound_features = ['acousticness', 'danceability', 'energy', 'instrumentalness', 'liveness', 'valence']
+fig = px.line(year_data, x='year', y=sound_features)
+fig.show()
+
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
